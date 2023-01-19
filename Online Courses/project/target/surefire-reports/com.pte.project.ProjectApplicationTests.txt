@@ -1,0 +1,27 @@
+-------------------------------------------------------------------------------
+Test set: com.pte.project.ProjectApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 4.239 s <<< FAILURE! - in com.pte.project.ProjectApplicationTests
+contextLoads  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: 
+Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/C:/Users/Asus/.m2/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/C:/Users/Asus/.m2/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'usersController' method 
+com.pte.project.controller.UsersController#findUsersByUsername(String)
+to {GET [/findUsersByUsername/{username}]}: There is already 'coursesController' bean method
+com.pte.project.controller.CoursesController#findCoursesByName(String) mapped.
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: 
+Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/C:/Users/Asus/.m2/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'usersController' method 
+com.pte.project.controller.UsersController#findUsersByUsername(String)
+to {GET [/findUsersByUsername/{username}]}: There is already 'coursesController' bean method
+com.pte.project.controller.CoursesController#findCoursesByName(String) mapped.
+Caused by: org.springframework.beans.factory.BeanCreationException: 
+Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'usersController' method 
+com.pte.project.controller.UsersController#findUsersByUsername(String)
+to {GET [/findUsersByUsername/{username}]}: There is already 'coursesController' bean method
+com.pte.project.controller.CoursesController#findCoursesByName(String) mapped.
+Caused by: java.lang.IllegalStateException: 
+Ambiguous mapping. Cannot map 'usersController' method 
+com.pte.project.controller.UsersController#findUsersByUsername(String)
+to {GET [/findUsersByUsername/{username}]}: There is already 'coursesController' bean method
+com.pte.project.controller.CoursesController#findCoursesByName(String) mapped.
+
